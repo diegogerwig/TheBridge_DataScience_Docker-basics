@@ -1,0 +1,29 @@
+version: '2'
+services:
+    web:
+        build: .
+        ports: 
+        - "5000:5000"
+        volumes:
+        - .:/app
+        depends_on:
+        - mongo
+        networks:
+        - app-network
+    mongo:
+        image: mongo
+        volumes:
+        - data-volume:/data/db
+        ports:
+        - "27017:27017"
+        networks:
+        - app-network
+networks:
+    app-network:
+        driver: bridge
+
+volumes:
+    data-volume:
+    node_modules:
+    web-root:
+      driver: local
