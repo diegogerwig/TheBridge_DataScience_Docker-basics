@@ -320,7 +320,7 @@ Al finalizar nuestro ejercicio podremos para el contenedor
 docker stop postgres-db
 ```
 
-Y si no quisieramos volver a usarlo, eliminarlo.
+Y si no quisiéramos volver a usarlo, eliminarlo.
 
 ```python
 docker rm postgres-db
@@ -388,6 +388,22 @@ docker build -t mysuperapp:v1 .
 
 Podemos hacer nuestra imagen accesible a nuestros compañeros, y esto se realiza bien dando acceso al Dockerfile para que ellos construyan su propia imagen, lo cual puede no ser muy operativo; o bien, subiendo nuestra imagen al DockerHub. Así, unicamente tendrán que ejecutar el comando _run_ para descargar y ejecutar nuestra aplicación.
 
+Para esto deberemos crear la imagen con el nombre de nuestro espacio en dockerhub
+
+```python
+docker build -t <usuario-docker-hub>/<nombre-contenedor>:<tag> .
+```
+
+Posterior deberemos registrar nuestra máquina para que dockerhub sepa quienes somos:
+
+```python
+docker login
+```
+
+Y entonces podremos hacer _push_ de la imagen para que todo el mundo pueda acceder a ella:
+```python
+docker push <usuario-docker-hub>/<nombre-contenedor>:<tag>
+```
 
 ## DOCKER COMPOSE
 
