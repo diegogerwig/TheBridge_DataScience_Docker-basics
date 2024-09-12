@@ -85,6 +85,10 @@ Básicamente Docker va a hacer lo siguiente:
 > **Una imagen Docker es un archivo, compuesto por múltiples capas, que se utiliza para ejecutar código en un contenedor Docker. Estas imágenes son las plantillas base desde la que partimos ya sea para crear una nueva imagen o crear nuevos contenedores para ejecutar las aplicaciones.**
 > 
 
+![capas](https://docs.docker.com/get-started/docker-concepts/building-images/images/container_image_layers.webp)
+
+[Más info](https://docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/)
+
 **ESTRUCTURA**
 
 - Sistema operativo.
