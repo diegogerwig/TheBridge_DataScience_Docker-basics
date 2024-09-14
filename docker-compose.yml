@@ -3,6 +3,6 @@ services:
     web:
         build: .
         ports: 
-            - "5000:5000"
+            - "5000:5000"  # Host:Container
         volumes:
-            - .:/app
+            - .:/app  # Link the current directory to the /app directory in the container
